@@ -15,7 +15,7 @@ function factory ( customOptions?: Partial<typeof defaultOptions> ) {
 
   const options = Object.assign ( {}, defaultOptions, customOptions );
 
-  return async function pull ( config, repoPath, ctx, task ) {
+  return async function stage ( config, repoPath, ctx, task ) {
 
     if ( !options.files ) return task.skip ( 'You need to provide some files' );
 
