@@ -31,7 +31,11 @@ function factory ( customOptions?: Partial<typeof defaultOptions> ) {
 
     git.silent ();
 
-    await git.add ( options.files );
+    try {
+
+      await git.add ( options.files );
+
+    } catch ( e ) {}
 
     const nowStaged = await countStaged ( git ),
           deltaStaged = nowStaged - prevStaged;
