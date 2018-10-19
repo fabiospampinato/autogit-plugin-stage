@@ -44,7 +44,7 @@ function factory ( customOptions?: Partial<typeof defaultOptions> ) {
     const nowStaged = await countStaged ( git ),
           deltaStaged = nowStaged - prevStaged;
 
-    task.output = prevStaged ? `Staged ${deltaStaged} more files, ${nowStaged} total` : `Staged ${nowStaged} files`;
+    task.output = prevStaged ? `Staged ${deltaStaged} more ${deltaStaged === 1 ? 'file' : 'files'}, ${nowStaged} total` : `Staged ${nowStaged} ${nowStaged === 1 ? 'file' : 'files'}`;
 
   };
 
