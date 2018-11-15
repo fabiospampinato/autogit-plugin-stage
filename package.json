@@ -28,11 +28,11 @@
     "stage"
   ],
   "dependencies": {
+    "@types/node": "^10.12.8",
     "chalk": "^2.4.1",
     "simple-git": "^1.105.0"
   },
   "devDependencies": {
-    "@types/node": "^10.9.4",
     "rimraf": "^2.6.0",
     "typescript": "^3.0.3",
     "typescript-transform-export-interop": "^1.0.1"
